@@ -25,4 +25,13 @@ else
     echo "Nginx installed successfully"
 fi
 
+# Start Nginx
+systemctl start nginx
+if [ $? -ne 0 ]; then
+    echo "Nginx start failed"
+    exit 1
+else 
+    echo "Nginx started successfully"
+fi
+
 exit 0
