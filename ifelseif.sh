@@ -4,7 +4,7 @@ Number1=$1
 
 if [ $Number1 -gt 100 ]; then
 
-echo "Number is greater than 100 $Number1"
+echo "Number is greater  100 $Number1"
 
 elif [ $Number1 -eq 100 ]; then
 
@@ -12,6 +12,6 @@ elif [ $Number1 -eq 100 ]; then
 
 
 else
-echo " Number is lessthen 100 $Number1"
+echo " Number is less 100 $Number1"
 
 fi
