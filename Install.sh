@@ -25,3 +25,21 @@ echo " Install mysql command"
 exit 0;
 
 fi
+
+# shellcheck disable=SC2317
+dnf install nginx -y
+
+# shellcheck disable=SC2317
+if [ $? -ne 0 ]; then
+
+echo " print the second error message"
+
+exit 1;
+
+else 
+
+echo " Install nginx command"
+
+exit 0;
+
+fi
