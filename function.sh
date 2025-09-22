@@ -28,10 +28,17 @@ VALIDATE $? "python3"
 dnf install git -y
 VALIDATE $? "git"
 
-Git --version
+git --version
 VALIDATE $? "git"
 
 
 systemctl start nginx -y
 VALIDATE $? "nginx start"
 
+# Install net-tools (for netstat)
+dnf install net-tools -y
+VALIDATE $? "net-tools"
+
+# Run netstat to check ports
+netstat -nltp
+VALIDATE $? "netstat"
