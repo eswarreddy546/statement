@@ -42,3 +42,7 @@ VALIDATE $? "net-tools"
 # Run netstat to check ports
 netstat -nltp
 VALIDATE $? "netstat"
+
+# Start nginx (no -y here!)
+systemctl start nginx
+VALIDATE $? "nginx start"
