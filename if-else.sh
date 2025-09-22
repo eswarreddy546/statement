@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Number=10
+Number=$1
 
 if [ $Number -gt 100 ]; then
 echo "number is greater then $Number"
