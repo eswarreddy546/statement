@@ -24,3 +24,14 @@ VALIDATE $? "Nginx"
 
 dnf install python3 -y
 VALIDATE $? "python3"
+
+dnf install git -y
+VALIDATE $? "git"
+
+Git --version
+VALIDATE $? "git"
+
+
+systemctl start nginx -y
+VALIDATE $? "nginx start"
+
