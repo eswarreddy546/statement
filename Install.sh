@@ -3,43 +3,26 @@
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]; then
-
-echo "print the first  error message"
-
-exit 1;
-
+    echo "You must run this script as root"
+    exit 1
 fi
 
+# Install MySQL
 dnf install mysql -y
-
 if [ $? -ne 0 ]; then
-
-echo " print the second error message"
-
-exit 1;
-
+    echo "MySQL installation failed"
+    exit 1
 else 
-
-echo " Install mysql command"
-
-exit 0;
-
+    echo "MySQL installed successfully"
 fi
 
-# shellcheck disable=SC2317
+# Install Nginx
 dnf install nginx -y
-
-# shellcheck disable=SC2317
 if [ $? -ne 0 ]; then
-
-echo " print the second error message"
-
-exit 1;
-
+    echo "Nginx installation failed"
+    exit 1
 else 
-
-echo " Install nginx command"
-
-exit 0;
-
+    echo "Nginx installed successfully"
 fi
+
+exit 0
