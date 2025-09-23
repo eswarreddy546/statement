@@ -2,5 +2,6 @@
 PERSON="\e[31m"
 
 
-echo -e "$PERSON Hello world i add color $N"
+# shellcheck disable=SC2154
+echo -e "$PERSON Hello world i add color $n"
 echo " Hi eswar"
