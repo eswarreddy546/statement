@@ -1,5 +1,6 @@
 #!/bin/bash
-Number="\e[32m"
+PERSON="\e[31m"
 
 
-echo -e "$Number Hello world i add color"
+echo -e "$PERSON Hello world i add color $N"
+echo " Hi eswar"
