@@ -19,6 +19,7 @@ if [ $USERID -ne 0 ]; then
 fi
 
 VALIDATE(){ # functions receive inputs through args just like shell script args
+    # shellcheck disable=SC2086
     if [ $1 -ne 0 ]; then
         echo -e "Installing $2 ... $R FAILURE $N" | tee -a $LOG_FILE
         exit 1
@@ -29,6 +30,7 @@ VALIDATE(){ # functions receive inputs through args just like shell script args
 
 # $@
 
+# shellcheck disable=SC2068
 for package in $@
 do
     # check package is already installed or not
