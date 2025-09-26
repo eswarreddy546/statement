@@ -2,7 +2,7 @@
 
 USER_ID=$(id -u)
 
-A="\e[31e]"
+A="\e[31m"
 
 if [ $USER_ID -ne 0 ]; then
 
