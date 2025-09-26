@@ -31,3 +31,12 @@ exit 1;
 else
 echo " command nginx is sucessfullly running "
 fi
+
+dnf remove mysql -y;
+
+if [ $? -ne 0 ]; then
+ echo "error not remove mysql"
+exit 1;
+ else "sucessfully removes mysql"
+
+ fi
