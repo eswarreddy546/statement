@@ -2,7 +2,7 @@
 
 USER_ID=$(id -u)
 
-A="\e[31m"
+A="\e[32m"
 
 if [ $USER_ID -ne 0 ]; then
 
@@ -46,7 +46,7 @@ exit 1;
 systemctl status nginx;
 if [ $? -ne 0 ]; then
 
-echo -e "not running not showing staus command : $A"
+echo -e " $A not running not showing staus command : "
 
 exit 1;
 else
