@@ -18,7 +18,7 @@ exit 1;
 
 else 
 
-echo -e " $R Installed sucessfully"
+echo  "  Installed sucessfully"
 
 fi
 
@@ -26,7 +26,7 @@ systemctl start nginx -y;
 
 if [ $? -ne 0 ]; then
 
-echo " not excute status command"
+echo -e " $R not excute status command"
 
 exit 1;
 
