@@ -38,10 +38,13 @@ fi
 dnf remove mysql -y;
 
 if [ $? -ne 0 ]; then
- echo -e " $B error not remove mysql"
-exit 1;
 
- else  " sucessfully removes mysql"
+ echo " error not remove mysql"
+
+ exit 1;
+
+ else 
+ echo -e " $B sucessfully removes mysql"
 
  fi
 
