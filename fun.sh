@@ -6,8 +6,7 @@ if [ $USE -ne 0 ]; then
  
  echo "eror occured"
 exit 1;
-else
-echo "error is not occured"
+
 
 fi
 
