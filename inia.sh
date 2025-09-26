@@ -46,7 +46,7 @@ exit 1;
 systemctl status nginx;
 if [ $? -ne 0 ]; then
 
-echo "not running not showing staus command : $A"
+echo -e "not running not showing staus command : $A"
 
 exit 1;
 else
