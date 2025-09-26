@@ -22,27 +22,16 @@ echo  "  Installed sucessfully"
 
 fi
 
-systemctl start nginx -y;
 
-if [ $? -ne 0 ]; then
-
-echo -e " $R not excute status command"
-
-exit 1;
-
-else
-  echo "excute sucessfully"
-
-  fi
-
- dnf install mysql -y ;
+ dnf install mysql -y;
   if [ $? -ne 0 ]; then
    echo " not created folder"
    exit 1;
+   
    else 
 
    echo "excute the command "
-   
+
  fi
 
   
