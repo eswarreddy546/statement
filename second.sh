@@ -34,3 +34,11 @@ else
   echo "excute sucessfully"
 
   fi
+
+mkdir eswarreddy
+  if [ $? -ne 0 ]; then
+   echo " not created folder"
+   exit 1;
+ fi
+
+  
