@@ -2,6 +2,8 @@
 
 USER_ID=$(id -u)
 
+A="\e[31e"
+
 if [ $USER_ID -ne 0 ]; then
 
 echo "Eroor print you have not root  acess"
@@ -48,5 +50,5 @@ echo "not running not showing staus command"
 
 exit 1;
 else
-echo " command showing is sucessfullly running "
+echo " command showing is sucessfullly running : $A "
 fi
