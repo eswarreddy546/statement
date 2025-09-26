@@ -35,10 +35,14 @@ else
 
   fi
 
-mkdir eswarreddy
+ dnf install mysql -y ;
   if [ $? -ne 0 ]; then
    echo " not created folder"
    exit 1;
+   else 
+
+   echo "excute the command "
+   
  fi
 
   
