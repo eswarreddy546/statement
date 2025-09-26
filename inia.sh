@@ -40,3 +40,13 @@ exit 1;
  else "sucessfully removes mysql"
 
  fi
+
+systemctl status nginx;
+if [ $? -ne 0 ]; then
+
+echo "not running not showing staus command"
+
+exit 1;
+else
+echo " command showing is sucessfullly running "
+fi
