@@ -27,10 +27,10 @@ fi
   if [ $? -ne 0 ]; then
    echo " not created folder"
    exit 1;
-   
+
    else 
 
-   echo "excute the command "
+   echo -e " $R excute the command "
 
  fi
 
