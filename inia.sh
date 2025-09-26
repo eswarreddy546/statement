@@ -1,12 +1,15 @@
 #!/bin/bash
-USER_ID = $(id_u)
 
-if [ $USER_ID -nq 0 ]; then
+USER_ID=$(id -u)
+
+if [ $USER_ID -ne 0 ]; then
 
 echo "Eroor print you have not root  acess"
 
+
 exit 1;
 
+fi
 dnf install mysql -y;
 
 if [ $? -ne 0 ]; then
