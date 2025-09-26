@@ -49,10 +49,10 @@ echo : "Alredy python3  is avalible please skip it....."
 
 fi
 
-#dnf list installed nginx;
-#if [ $? -ne 0 ]; then
-#dnf remove nginx -y;
-#valid $? "mysql"
-#else 
-#echo : "Alredy nginx is not avalible removed....."
-#fi/
+dnf list installed nginx;
+if [ $? -ne 0 ]; then
+dnf remove python3 -y;
+valid $? "mysql"
+else 
+echo : "Alredy python3 is not avalible removed....."
+fi
