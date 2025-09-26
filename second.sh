@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USER=$(id -u)
-R="e\[32m"
+R="\e[32m"
 
 if [ $USER -ne 0 ]; then
 echo: "error tou have not root acess"
