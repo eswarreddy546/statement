@@ -3,6 +3,7 @@
 USER_ID=$(id -u)
 
 A="\e[32m"
+B="\e[33m"
 
 if [ $USER_ID -ne 0 ]; then
 
@@ -37,16 +38,17 @@ fi
 dnf remove mysql -y;
 
 if [ $? -ne 0 ]; then
- echo "error not remove mysql"
+ echo -e " $B error not remove mysql"
 exit 1;
- else "sucessfully removes mysql"
+
+ else  " sucessfully removes mysql"
 
  fi
 
 systemctl status nginx;
 if [ $? -ne 0 ]; then
 
-echo -e " not running not showing staus command : $A "
+echo -e " $A not running not showing staus command : "
 
 exit 1;
 else
