@@ -1,7 +1,9 @@
 #!/bin/bash
 
 WEB=$(id -u)
-trap 'echo "❌ Error occurred on line $LINENO. Stopping script safely..."; exit 1' ERR
+
+set -u
+#trap 'echo "❌ Error occurred on line $LINENO. Stopping script safely..."; exit 1' ERR
 
 
 
@@ -29,4 +31,4 @@ dnf install mysql -y
 
 dnf install nginx -y
 
-dnf install python3 -y
+dnf installs python3 -y
