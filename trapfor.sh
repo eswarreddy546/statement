@@ -20,7 +20,7 @@ valid() {
         echo "❌ Installation FAILED for $2"
         exit 1
     else
-        echo "✅ Successfully installed $2"
+        echo "✅ Successfully installed $2 .......skipping the code "
     fi
 }
 
