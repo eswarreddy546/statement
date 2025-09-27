@@ -23,3 +23,12 @@ else
 }
 dnf remove mysql -y;
 valid $? "mysql"
+
+dnf install mysql -y;
+valid $? "mysql"
+
+dnf install nginx  -y;
+valid $? "nginx"
+
+dnf install python3 -y;
+valid $? "python3"
