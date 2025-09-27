@@ -2,7 +2,6 @@
 
 WEB=$(id -u)
 
-set -u
 #trap 'echo "❌ Error occurred on line $LINENO. Stopping script safely..."; exit 1' ERR
 
 
