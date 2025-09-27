@@ -2,31 +2,31 @@
 
 WEB=$(id -u)
 
-if [ $WEB -ne 0 ]; then
-echo "error : not root privelilage acess "
-
-else 
-echo " Sucessfully excuted"
+# Root check — if not root, print error and exit
+if [ "$WEB" -ne 0 ]; then
+    echo "❌ Error: not root privilege access. Please run with sudo."
+    exit 1
+else
+    echo "✅ Successfully executed as root"
 fi
 
-Valid ()
-{
-    if [$1 -ne 0 ]; then
-    echo " not installed $2 sucessfully "
-
-    exit 1;
-else
-    echo " sucessfully installed $2 "
-
+# Function must be defined with same name we call (lowercase 'valid')
+valid() {
+    # note spaces around [ and ] and quoting variables
+    if [ "$1" -ne 0 ]; then
+        echo "❌ Installation FAILED for $2"
+        exit 1
+    else
+        echo "✅ Successfully installed $2"
     fi
-
 }
 
-dnf install mysql -y;
+# Install packages and validate
+dnf install mysql -y
 valid $? "mysql"
 
-dnf install nginx -y;
+dnf install nginx -y
 valid $? "nginx"
 
-dnf install python3 -y;
+dnf install python3 -y
 valid $? "python3"
