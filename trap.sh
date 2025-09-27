@@ -6,7 +6,7 @@ trap 'echo "❌ Error occurred on line $LINENO. Stopping script safely..."; exit
 
 echo "Step 1: Hello"     # ✅ runs
 echo "Step 2: Before"    # ✅ runs
-ec "Wrong command"       # ❌ error, script stops but trap will catch
+echo "Wrong command"       # ❌ error, script stops but trap will catch
 ec "Wrong command"       # ❌ error, script stops but trap will catch
 ec "Wrong command"       # ❌ error, script stops but trap will catch
 ec "Wrong command"       # ❌ error, script stops but trap will catch
