@@ -4,12 +4,11 @@ UAID=$(id -u)
 if [ $UAID -ne 0 ]; then
 
 echo "error: not privilage acess "
+exit 1;
 
 else
 
-exit 1;
-
-echo  "Sucessfully Running"
+ echo "Hello world"
 
 fi
 
