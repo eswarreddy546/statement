@@ -21,8 +21,6 @@ else
     fi
 
 }
-dnf remove mysql -y;
-valid $? "mysql"
 
 dnf install mysql -y;
 valid $? "mysql"
