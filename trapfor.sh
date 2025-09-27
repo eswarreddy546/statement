@@ -1,6 +1,7 @@
 #!/bin/bash
 
 WEB=$(id -u)
+trap 'echo "❌ Error occurred on line $LINENO. Stopping script safely..."; exit 1' ERR
 
 
 
@@ -25,10 +26,7 @@ valid() {
 
 # Install packages and validate
 dnf install mysql -y
-valid $? "mysql"
 
 dnf install nginx -y
-valid $? "nginx"
 
-dnf install python3 -y
-valid $? "python3"
+dnf installsss python3 -y
