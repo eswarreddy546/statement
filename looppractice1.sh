@@ -25,7 +25,7 @@ else
 dnf install mysql -y;
 valid $? "mysql"
 
-dnf install nginx  -y;
+dnf install nginx -y;
 valid $? "nginx"
 
 dnf install python3 -y;
