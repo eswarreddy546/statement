@@ -1,5 +1,8 @@
 #!/bin/bash
 UAID=$(id -u)
+R="\e[31m"
+E="\e[32m"
+
 
 if [ $UAID -ne 0 ]; then
 echo "error: not privilage acess "
@@ -17,7 +20,7 @@ echo " not excutd "
 
 else
 
-echo " sucessfully excuted "
+echo -e " $R sucessfully excuted "
 
 fi
 
@@ -29,7 +32,7 @@ echo " not excutd "
 
 else
 
-echo " sucessfully nginx excuted "
+echo -e "$E sucessfully nginx excuted "
 
 fi
 
@@ -41,6 +44,6 @@ echo " not excutd "
 
 else
 
-echo " sucessfully  excuted python3 "
+echo -e " $E sucessfully  excuted python3 "
 
 fi
