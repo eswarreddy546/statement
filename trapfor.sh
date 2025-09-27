@@ -32,3 +32,4 @@ dnf install mysql -y
 dnf install nginx -y
 
 dnf installs python3 -y
+ech " finally excuted the code "
