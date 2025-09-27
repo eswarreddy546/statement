@@ -29,4 +29,4 @@ dnf install mysql -y
 
 dnf install nginx -y
 
-dnf installsss python3 -y
+dnf install python3 -y
